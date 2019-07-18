@@ -8,6 +8,8 @@ git status --> status of git
 		Push Commits
 git remote add origin https://github.com/Username/filename.git --> add remote repository path
 git add MyFile.txt --> add file to the repository
+git add . --> add everything in this folder
+git add ./foldername --> add everything in this foldername
 git commit -m "myfile created" --> commit to branch with message
 git log --> gets commit history
 git push origin master --> push to remote repository
@@ -15,3 +17,6 @@ git push origin master --> push to remote repository
 		Pull Commits
 git remote add origin https://github.com/Username/filename.git --> add remote repository path
 git pull origin master --> pull from repository
+
+git add . --> add everything in this folder
+git add ./foldername --> add everything in this foldername
