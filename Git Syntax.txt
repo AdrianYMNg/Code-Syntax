@@ -1,0 +1,17 @@
+		System Command
+Git init --> initialise
+git config --> gets configuration options
+git config --global user.email "Adrian.Ng@academytrainee.com" --> configurate email address
+git config --global user.name "Adrian" --> configurate name for commit
+git status --> status of git
+
+		Push Commits
+git remote add origin https://github.com/AdrianYMNg/QA-Test.git --> add remote repository path
+git add MyFile.txt --> add file to the repository
+git commit -m "myfile created" --> commit to branch with message
+git log --> gets commit history
+git push origin master --> push to remote repository
+
+		Pull Commits
+git remote add origin https://github.com/AdrianYMNg/QA-Test.git --> add remote repository path
+git pull origin master --> pull from repository
