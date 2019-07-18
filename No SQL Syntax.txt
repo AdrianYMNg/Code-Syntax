@@ -1,0 +1,68 @@
+
+SQL		Mongo
+
+Database	Database
+Table		Collection
+Row		Document
+Column		Field
+
+						COMMANDS
+db 					- show current selected db
+show dbs 				- show all dbs
+db.createCollection(("Collection_name") - create collection
+db.collection_name.drop() 		- delete collection
+db.collection_name.insert(		- insert data
+	{
+		user_id: "67234"
+		age: 50
+		f_name: "James"
+	}
+)
+					-insert alternative
+db.collection_name.insert({user_id: "67234",age: 50,f_name: "James"})
+					-delete from
+db.collection_name.remove({status:"D"})
+					-update
+db.collection_name.update(
+	{
+		age:{$gt:65}
+	},
+	{
+		$set:{status:"pensioner"}
+	},
+	{multi:true}
+)
+db.users.find()				-select all
+					-select condition
+db.users.find(
+	{},`				<- where clause
+	{_id: 0, user_id:1,status: 1}	<- missing fields will be ignored,'_id' needs to be set to 0 or will show up
+)
+
+db.users.find(
+{status: "A" }
+)
+
+db.users.find(
+{
+status: {$ne "A"}
+}
+)
+$in []
+$or
+$and
+$nor
+&not
+$exists
+
+.pretty() - makes pretty printing to output
+.findOne()
+.limit(1)
+.sort({"score" : 1})	- asc sort
+.sort({"score" : -1})	- desc sort
+.count()
+.find().count()
+.distinct("type")
+$slice 			- limt how many results in an array
+
+mongoimport --db test --collection restaurants --drop --file C:/Users/Admin/Documents/MongoDB/primer-dataset.json
