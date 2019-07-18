@@ -8,7 +8,7 @@ git checkout -b "new-branch name" --> create a new branch in the repository
 git checkout "branch name" --> switch to diffrent branch in the repository
 
 		Push Commits
-git remote add origin https://github.com/Username/filename.git --> add remote repository path
+git remote add origin https://github.com/Username/repositoryname.git --> add remote repository path
 git add MyFile.txt --> add file to the repository
 git add . --> add everything in this folder
 git add ./foldername --> add everything in this foldername
@@ -19,3 +19,7 @@ git push origin master --> push to remote repository
 		Pull Commits
 git remote add origin https://github.com/Username/filename.git --> add remote repository path
 git pull origin master --> pull from repository
+
+		Mark down Language
+# --> title 1
+## --> title 2
