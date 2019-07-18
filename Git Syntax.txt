@@ -4,6 +4,7 @@ git config --> gets configuration options
 git config --global user.email "Email@gmail.com" --> configurate email address
 git config --global user.name "Name" --> configurate name for commit
 git status --> status of git
+git checkout -b "new-branch" --> switch to diffrent branch in the repository
 
 		Push Commits
 git remote add origin https://github.com/Username/filename.git --> add remote repository path
@@ -17,6 +18,3 @@ git push origin master --> push to remote repository
 		Pull Commits
 git remote add origin https://github.com/Username/filename.git --> add remote repository path
 git pull origin master --> pull from repository
-
-git add . --> add everything in this folder
-git add ./foldername --> add everything in this foldername
