@@ -7,6 +7,11 @@ git status --> status of git
 git checkout -b "new-branch name" --> create a new branch in the repository
 git checkout "branch name" --> switch to diffrent branch in the repository
 
+		Commits
+git reset HEAD --> remove last commit (files are unchanged)
+git merge "branchname"--> merge to branch
+
+
 		Push Commits
 git remote add origin https://github.com/Username/repositoryname.git --> add remote repository path
 git add MyFile.txt --> add file to the repository
