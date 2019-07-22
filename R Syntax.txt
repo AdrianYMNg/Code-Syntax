@@ -1,0 +1,94 @@
+						R language Syntax
+
+		Dataset Functions
+data() --> get full list of available data
+data("datasetname") --> get the data from datasetname
+nrow(datasetname) --> get number of rows
+ncol(datasetname) --> get number of columns
+summary(datasetname) --> gives summary for the dataset
+plot(datasetname) --> to plot a graph from the dataset
+?functionname --> find meaning of the function
+
+		Datatypes
+myvariable <- definition --> assign value of definition to myvariable
+myint <- 5L <- as.integer(myint) --> to force change to integer
+class(variablename) --> gives the type of the variable
+myvector = <- c("name", "variable", ...) -->assigns value into a list as c
+myvvector (1 : 50) --> gives range between 2 numbers
+my list <- list(value) --> to assign values to list
+mylist[[2]] --> to get value in list at 2
+$name --> to assign name to reference column 
+head(data) --> first 6 value
+tail(data) --> last 6 value
+
+		Dataframe
+data.frame(type, type, ...) --> makes dataframe for you with type as headers(need to assign list of type first)
+dataframe[1 , 2] --> gives value of first row second column
+dataframe[1, ] --> gives all of first row
+dataframe [1:10, 2:20] --> gives values of first row  to 10th row and second column to 20th column
+dim(data) --> gives dimentions in rows then columns
+str(dataframe) --> gives the structure of dataframe
+
+		Comparison
+mean() --> calculate medium
+min() --> calculate minimum
+max() --> calculate maximum
+which.max(data.length) --> which is the max value
+
+		Matrix --> same as dataframe but have to contain same value type
+matrixRowss <- matrix() --> sets rows for a matrix
+matrixCols <- matrix() --> sts columns for a matrix
+rbind() --> binds all values in that row
+cbind() --> binds all values in that column
+rsum() --> gives sum of that row
+csum()--> gives sum of that column
+multi <- matrixRows * 2 --> multiply the value in rows by 2 and set to multi
+
+		Factors
+factors(values, values, ...) --> sets a catogory (in order) of options that cant be changed
+nominal(values, values, ...) --> same as factors but not in order
+
+		Operator
+if(){}
+else if(){} --> needs to be directly behind } braket
+else{} --> needs to be directly behind } braket
+for (i in 3:n) --> for i in range of 3 till n
+
+		Operation Functions
+result <- function(value, value){ calulation definition  -- return value} --> create function returning result
+^^^ function(value=123) --> sets default value
+evaluate <- function(function, data) {func(data)} --> gets value of function and proceed next function
+substr(value, tovalue) --> change value to value
+tolower() --> set to lower
+paste(value, value, ...) --> print values
+paste(string, withargument, defaultvalue = "bob") --> paste string with arguments having default value to bob
+sub(value, tovalue, instring) --> change value to value in string
+
+		Regex
+\\w --> locate an word
+\\w+ --> locate one or more word
+\\w* --> locates zero to many words
+
+		Working Directory
+getwd() --> return current working directory
+setwd() --> sets the working directory
+table <- read.filetype(filepath) --> read file from file path
+table <- read.table(file) --> read data and paste into table structure
+write.filetype()data, filename --> writes data into file
+write.table(data, filename) --> writes table into file
+
+		Plotting
+plot(rowname ~ columnname, data = name) --> plot graph setting row name(x) and column name(y) from name
+abline(argument, argument) --> sets a horizntal line with arguments
+abline(lm(argument ~ argument)) --> linear model line using arguments
+plot(argument,argument,settings(example below))
+	pch ="#" --> makes # as node
+	cex = 5 --> makes size to 5
+	col = blue -->sets node to blue
+	pch=()2,3,4[type] -->sets diffrent shapes for each diffrent value
+	col= c(colour,colour,colour)[type] --> sets colour for difrent values
+	sub = --> sets subtitle row or column name
+legend("position","title",legend= levels(type))
+par() --> partition to make multiplegraphs
+hist() --> histograms
+boxplot() --> box graph
