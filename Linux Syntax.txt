@@ -11,6 +11,7 @@ version=$(uname -r) <- assign value to "version" with command "uname"
 '	<- disable reconigsion for special character
 " 	<- protect special character
 \	<- escape charcter
+pws	<- print working directory
 
 
 	Short Options(does not runs with Long option)
@@ -81,3 +82,16 @@ mkdir [-pm] directoryname	<- make directory with parent directory	and mode
 rmdir				<- remove directory
 rm -r directoryname		<- delete all content in this directory
 cp				<- copy directory
+
+	Variable/Function/
+export		<- allows to be seen by others in the program
+set		<- display all variables
+env		<- display exported variables
+unset		<- delete variables
+PATH		<- gets all file paths
+type file name	<- gives path of where the file is
+
+		set options
+set -o	<- list all options
+-o	<- turn option on
++o	<- turn option off
