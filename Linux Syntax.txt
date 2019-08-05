@@ -1,0 +1,83 @@
+		Linux
+
+	Structure
+$ 		ls 		-l 		--color 	-- 		/home/name 	<cr>
+shell prompt	command		short option	long option	end marker	file path	end of command
+
+	Command
+ls 	<- get content in directory
+echo	<- get what the file is
+version=$(uname -r) <- assign value to "version" with command "uname"
+'	<- disable reconigsion for special character
+" 	<- protect special character
+\	<- escape charcter
+
+
+	Short Options(does not runs with Long option)
+-a	<- list all
+-l	<- long (more detail)
+-r	<- reverse order
+-t	<- time
+*	<- zero or more characters
+?	<- exactly 1 character
+[abc]	<- single character within(a,b,c)
+[A-Z]	<- single character within range
+[!abc]	<- single character that is not (a,b,c)
+~	<- user's home directory
+
+
+	Long Options(does not run with Short option)
+[[:upper:]]*	<- all upper case characters
+[[:lower:]]*	<- all lower case characters
+[[:digit:]]*	<- all digits
+
+	File System
+(/.filename) <- will hide the file from ls search
+~cd	<- change directory
+./	<- this directory
+../	<- parent directory
+
+		Permissions
+			structure
+d 		rwx 	rwx 	rwx
+directory	owner	group	others
+
+-	<- it is a file
+d	<- it is  directory
+l	<- link
+
+r	<- read
+w	<- write
+x	<- execute
+
+	Links
+$stat	<- gives all information of a file
+
+		Structure
+ln 	-s 			source 			target
+link	symbolic or not		source of file		name of file
+
+ln	<- link
+-i	<- get i-node number
+-s	<- make it symbolic link
+-ilL	<- get the information of the symbolic linked file
+
+		Moving file
+mv	<- move or rename file
+-i	<- interactive checking
+-f	<- force it no matter
+
+		Remove file
+rm 	<- remove file
+-i	<- interactive check
+-r	<- repeat for all lower directory
+-f	<- force no matter
+
+		Directory command
+mkdir [-pm] directoryname	<- make directory with parent directory	and mode
+-p	<- parent directory	
+-m 	<- set the mode
+	
+rmdir				<- remove directory
+rm -r directoryname		<- delete all content in this directory
+cp				<- copy directory
