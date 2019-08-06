@@ -1,4 +1,6 @@
 		Linux
+-man/info/ih/--help	<- gives help to code entered
+compgen -c 		<- gives all commands available to use
 
 	Structure
 $ 		ls 		-l 		--color 	-- 		/home/name 	<cr>
@@ -12,6 +14,7 @@ version=$(uname -r) <- assign value to "version" with command "uname"
 " 	<- protect special character
 \	<- escape charcter
 pws	<- print working directory
+;	<- allows multi command in 1 command
 
 
 	Short Options(does not runs with Long option)
@@ -95,3 +98,45 @@ type file name	<- gives path of where the file is
 set -o	<- list all options
 -o	<- turn option on
 +o	<- turn option off
+
+	Fact finding
+ps[option] 	<- display all the processes
+date [+format]	<- display current date time
+uname[option]	<- display basic OS & platform info
+who/w		<- list users logged onto the system
+cat		<- read file/script
+grep condition	<- select all lines/file that matches the condition word
+wc -l		<- count the lines in the file
+tail		<- display last 10 lines of the file
+head		<- display first 10 lines of the file
+|		<- (pipe symbol)allows the output of commanmd infront to be input for command after
+
+history		<- list all commands keyyed in before
+!123		<- execute the command from history with code 123
+
+	File access
+chmod	<- change permissions for files
+			Structure
+chmod 			ugo=rwx 				file
+change permission 	user group other = read write execute	filename
+
+a	<- all users instead of setting ugo
+= 	<- set permission
++	<- add permission
+-	<- remove permission
+-R	<- recursively
+chown	<- change owner
+chgrp	<- change group
+
+	Data stream
+stdout			<- standard output
+stderr			<- standard error
+stdin			<- standard input
+>			<- print to file(will overwrite)
+>>			<- append into the end of the file
+2>			<- prints to file only if error occur
+2>>			<- append to file if error occur
+<			<- gets information from file to a string
+set -o noclobber	<- makes files uanble to overwrite files that exist
+>|			<- overwrites the noclobber option
+1&2>			<- prints for both if command excutes and if error
