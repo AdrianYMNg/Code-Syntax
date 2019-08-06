@@ -140,3 +140,22 @@ stdin			<- standard input
 set -o noclobber	<- makes files uanble to overwrite files that exist
 >|			<- overwrites the noclobber option
 1&2>			<- prints for both if command excutes and if error
+
+	Data Manipulation
+grep	<- get selected
+	-v	<- output non match lines
+	-c	<- output count of lines matched
+	-i	<- ignore lower/upper case
+	-n	<- outputs matched line number
+cut	<-	<- splits result into sections
+	-d" "	<- delimiter by spaces
+	-f2,3	<- select 2nd & 3rd field
+	-f1-3	<- selects first to 3rd field
+sort	<- sort in order
+	-n	<- sort by numeric order
+	-r	<- sort then display in reverse order
+	-u	<- sort but only show unique entries
+uniq	<- unique data(require sort command before)
+	-u	<- display unique lines only(discard duplicates)
+	-d	<- display lines with 1 duplicate(no unique lines)
+	-c	<- counts the number of duplicates
