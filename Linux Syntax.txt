@@ -161,3 +161,41 @@ uniq	<- unique data(require sort command before)
 	-u	<- display unique lines only(discard duplicates)
 	-d	<- display lines with 1 duplicate(no unique lines)
 	-c	<- counts the number of duplicates
+
+	Shell Script
+#!/bin/bash	<- use bourne shell(required in first line ofall script)
+read data	<- set variable data to input from console
+if [ condition ]	...	then	...	else	...	then	...	fi	<- if statement
+	-gt	<- greater than
+	-lt	<- less than
+	-ge	<- greater or equal
+	-le	<- less or equal
+	-eq	<- equals
+	-ne	<- not equal
+for condition in range	do	...	((increment condition))		done
+while [ condition ]	do	...	((loop condition))		done
+until [ condition ]	do	...	((loop condition))		done	<- always runs at least once
+case condition in	"1") ...;;	"2") ...;;	* ...	esac
+		Arrays
+	declare -a arrayname=("1", "2" "3")
+		-a	<- set as array
+	for i in "${arrayname[0]}"	do	...	((increment condition))		done
+
+
+	Taking arguments
+myfunc() {
+	counter=0
+	while [ $counter -lt $# ]
+	do
+		echo $1
+		shift 1
+		((counter++))
+	done
+
+myfunc() {
+	for i in $@
+	do
+		echo "$i"
+	done
+}
+myfunc test1 test2
